@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+
+  "name": "Ban Commercial Vids",
+  "description": "This extension allows youtube users alerts another users when a youtube video has advertising ",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "form.html",
+    "scripts": ["form.js", "jquery.js"],
+    "persistent": false,
+    "default_title": "Report Vid!"
+
+  },
+  "permissions": [
+    "activeTab",
+    "http://localhost:8080/*",
+    "http://localhost:80/*"
+
+  ],
+  "content_scripts": [
+    {
+    "all_frames": false,
+    "matches": ["<all_urls>"],
+    "exclude_matches": [],
+    "js": ["jquery.js", "form.js"]
+    }
+  ],
+  "web_accessible_resources": ["dis.png", "like.jpg"]
+}

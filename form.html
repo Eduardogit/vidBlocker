@@ -1,0 +1,66 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+-->
+<html>
+<head>
+  <title>Avoid Advertising Over Vids</title>
+  <script src="jquery.js"></script>
+  
+  
+  <style>
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+    body {
+      font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+      font-size: 100%;
+    }
+    #status {
+      /* avoid an excessively wide status text */
+      white-space: pre;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 400px;
+    }
+    h3{
+      margin: 10px;
+    }
+    #send{
+      padding: 5px;
+      background: #BC4D00;
+      border: 0px;
+      border-radius: 10px;
+      color: #fff;
+    }
+    .status{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      background: #ccc;
+    }
+  </style>
+  <script src="form.js"></script>
+</head>
+<body>
+  <center>
+    <h3>VidBlocker</h3>
+
+    <img src="https://lh3.googleusercontent.com/s5FxSJCtdwrqpz1JRLYX_zyyGMVbPHBz3QbYrqwFdZm_ngSH7UvsGW_OOPuDIjGjFxI=w300" style="width:100px;" alt="">
+
+    <section class="status"><small>video status</small></section>
+
+    <section class="status"><small>report section</small></section>
+
+    <button id="send">Report this video</button>
+  </center>
+
+  <input type="hidden" placeholder="Type the reason ..." id="title">
+
+  <div id="status"></div>
+
+</body>
+</html>
+
