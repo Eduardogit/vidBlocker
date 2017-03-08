@@ -12,19 +12,15 @@
     "default_title": "Report Vid!"
 
   },
+  "content_scripts": [ {
+      "matches": ["<all_urls>"],
+      "js": ["jquery.js", "form.js"]
+    } ],
   "permissions": [
     "activeTab",
     "http://localhost:8080/*",
     "http://localhost:80/*"
 
-  ],
-  "content_scripts": [
-    {
-    "all_frames": false,
-    "matches": ["<all_urls>"],
-    "exclude_matches": [],
-    "js": ["jquery.js", "form.js"]
-    }
   ],
   "web_accessible_resources": ["dis.png", "like.jpg"]
 }

@@ -4,13 +4,14 @@
        tabUrl = tab.url;
 
        //con la linea de abajo se oculta el inpu 
-       document.getElementById('title').value = tabUrl;
+       //document.getElementById('title').value = tabUrl;
        //document.write(tabUrl);
        //sendCurrentUrl(tabUrl)
+       $('#send').on('click',function(){
+          alert(tabUrl)
+      })
    });
-$('#send').on('click',function(){
-  console.log("etc")
-})
+
 function sendCurrentUrl(url) {
   var req = new XMLHttpRequest();
   req.addEventListener('readystatechange', function (evt) {
