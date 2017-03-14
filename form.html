@@ -8,13 +8,13 @@
 <head>
   <title>Avoid Advertising Over Vids</title>
   <script src="jquery.js"></script>
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.css">
   
   <style>
-  *{
-    margin: 0px;
-    padding: 0px;
-  }
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
     body {
       font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
       font-size: 100%;
@@ -45,20 +45,19 @@
   <script src="form.js"></script>
 </head>
 <body>
-  <center>
-    <h3>VidBlocker</h3>
-
-    <img src="https://lh3.googleusercontent.com/s5FxSJCtdwrqpz1JRLYX_zyyGMVbPHBz3QbYrqwFdZm_ngSH7UvsGW_OOPuDIjGjFxI=w300" style="width:100px;" alt="">
-
-    <section class="status"><small>video status</small></section>
-
-    <section class="status"><small>report section</small></section>
-
-    <button id="send">Report this video</button>
-  </center>
-
-  <input type="hidden" placeholder="Type the reason ..." id="title">
-
+  <h3 class="text-center">VidBlocker</h3>
+  <img class="center-block" src="https://lh3.googleusercontent.com/s5FxSJCtdwrqpz1JRLYX_zyyGMVbPHBz3QbYrqwFdZm_ngSH7UvsGW_OOPuDIjGjFxI=w300" style="width:100px;" alt="">
+  <section class="col-xs-12 text-center status"><small>video status</small></section>
+  <div class="col-xs-12">
+    <div style="font-size:37px;text-align: center;color:red">62%</div>
+    <div class="col-xs-12 text-center">people votes <strong style="color:red">5232</strong>/<strong style="color:blue">3263</strong></div>
+    <div class="col-xs-12">
+      <img class="center-block" width="50px" src="http://cdn.peacefulcentury.net/wp-content/uploads/2015/09/dislike.jpeg" alt="">
+    </div>
+  </div>    
+  <section class="text-center col-xs-12 status"><small>report section</small></section>
+  <button class="col-xs-12" id="send">Report this video</button>
+  <input class="" type="hidden" placeholder="Type the reason ..." id="title">
   <div id="status"></div>
 
 </body>

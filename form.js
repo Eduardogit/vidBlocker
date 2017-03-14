@@ -2,6 +2,9 @@
    chrome.tabs.getSelected(null, function(tab) {
        var tabId = tab.id;
        tabUrl = tab.url;
+       if(tab.url == 'https://www.youtube.com/watch?v=EviNimQjut8'){
+          alert('bullshit')
+       }
 
        //con la linea de abajo se oculta el inpu 
        //document.getElementById('title').value = tabUrl;
@@ -11,6 +14,10 @@
           alert(tabUrl)
       })
    });
+
+
+
+
 
 function sendCurrentUrl(url) {
   var req = new XMLHttpRequest();
